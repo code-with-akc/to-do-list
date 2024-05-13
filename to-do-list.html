@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lemon&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: rgb(34, 193, 195);
+            background: radial-gradient(circle, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            font-family: 'Lemon', serif;
+
+        }
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1,
+        h2 {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            color: orangered;
+            font-size: 30px;
+        }
+
+        input {
+            /* outline: none; */
+            border: none;
+            width: 300px;
+            height: 35px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: aqua;
+            font-family: 'Lemon', serif;
+            color: grey;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border: none;
+            height: 45px;
+            padding: 15px;
+            border-radius: 5px;
+            background: rgb(131, 58, 180);
+            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            font-family: 'Lemon', serif;
+            color: green;
+        }
+    </style>
+    <script>
+        function add_task() {
+            var task = document.getElementById("task").value;
+            document.getElementById("result").innerHTML = task;
+            // document.write(task);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Task List</h1>
+        <input id="task" type="text" placeholder="Write a task">
+        <button onclick="add_task()">ADD TASK</button>
+        <h2>Today's task:</h2>
+        <p id="result"></p>
+    </div>
+</body>
+
+</html>
